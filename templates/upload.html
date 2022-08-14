@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <link href="bootstrap/3.0.0/css/bootstrap.min.css"
+     rel="stylesheet">
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <h3 class="text-muted">Uploaded files</h3>
+   </div>
+   <hr/>
+   <div>
+   Relevant functions include-
+   <ul>
+    {% for file in filenames %}
+     <li><a href="{{url_for('upload', filename=file)}}">{{file}}</a></li>
+    {% endfor %}
+   </ul>
+   <hr/>
+   <form action="ks_test">
+     <input type="submit" value="SUBMIT">  
+   </form>
+   </div>
+  </div>
+ </body>
+</html>
