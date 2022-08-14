@@ -112,8 +112,8 @@ def upload():
                 contents = f.read()
             filedata[file.filename] = contents
     session['filenames'] = filenames
-    order = BERT(filenames,filedata)
-    return render_template('upload.html', filenames=order)
+    #order = BERT(filenames,filedata)
+    return render_template('upload.html', filenames=filenames)
 
 
 if __name__ == "__main__":
